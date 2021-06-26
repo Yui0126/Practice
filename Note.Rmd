@@ -5,6 +5,7 @@ output: html_notebook
 
 Practices through the "Bayes Rules!"
 (https://www.bayesrulesbook.com/chapter-2.html)
+I changed the place of the file. Is it still working?
 
 
 ```{r}
