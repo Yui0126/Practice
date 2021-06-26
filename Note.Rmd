@@ -1,0 +1,36 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+Practices through the "Bayes Rules!"
+(https://www.bayesrulesbook.com/chapter-2.html)
+
+
+```{r}
+# Load packages
+install.packages("bayesrules")
+install.packages("janitor")
+library(bayesrules)
+library(tidyverse)
+library(janitor)
+
+# Import article data
+data(fake_news)
+str(fake_news)
+names(fake_news)
+##
+
+fake_news %>%
+  tabyl(type) %>%
+  adorn_totals("row")
+
+fake_news %>%
+  tabyl(title_has_excl, type) %>%
+  adorn_totals("row")
+
+
+
+```
+
+
