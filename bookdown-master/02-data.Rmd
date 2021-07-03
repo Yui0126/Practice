@@ -1,0 +1,37 @@
+# Data
+
+
+## Getting data
+- **Reading data from directory**
+```{r}
+hw1_data <- read.csv(file = "C:/Users/ynaru/Desktop/R coursera/Statistics with R/hw1_data.csv",header = T)
+```
+
+
+- **Getting data from URL**  
+You can download a file from Github.
+    - Go to the file you want to download
+    - Click "raw"
+    - Copy the link and use `download.file`
+```{r}
+getwd()
+link <- "https://raw.githubusercontent.com/Yui0126/datasciencectacontent/master/data/covid_GA_CO.csv"
+download.file(link, "covid_data.csv")
+covid <- read.csv(file = "covid_data.csv")
+```
+
+
+
+
+
+
+```{r}
+table(is.na(hw1_data$Ozone))
+mean(hw1_data$Ozone, na.rm = T)
+hw1_data2 <- subset(hw1_data, Ozone >31 & Temp > 90)
+mean(hw1_data2$Solar.R)
+class(hw1_data$Month)
+mean(subset(hw1_data, Month == 6)$Temp)
+max(subset(hw1_data, Month == 5)$Ozone, na.rm = T)
+```
+
