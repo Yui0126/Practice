@@ -2,6 +2,9 @@
 
 In this chapter, basic elements needed for using R will be inspected.
 
+
+hellow??
+
 ## Vectors and matrices
 - **Vector**  
 vector can contain only same class of objects
